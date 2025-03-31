@@ -1,0 +1,21 @@
+[gd_scene load_steps=7 format=3 uid="uid://c176je26g33ps"]
+
+[ext_resource type="PackedScene" uid="uid://cf0cgusy4b3oa" path="res://game/base_entity/entity.tscn" id="1_m7wu0"]
+[ext_resource type="Script" uid="uid://r6w0xtrps2hr" path="res://game/player/player_base.gd" id="2_35i83"]
+[ext_resource type="PackedScene" uid="uid://spmo71ny1elp" path="res://game/player/death_player.tscn" id="3_f024u"]
+[ext_resource type="PackedScene" uid="uid://bjq6p73618dww" path="res://game/player/player_attack.tscn" id="4_nlshs"]
+[ext_resource type="PackedScene" uid="uid://cuqb5ikp35v5k" path="res://game/player/player_state_machine.tscn" id="5_p4vu3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hc36v"]
+
+[node name="player_base" instance=ExtResource("1_m7wu0")]
+script = ExtResource("2_35i83")
+
+[node name="shape" parent="." index="0"]
+shape = SubResource("CircleShape2D_hc36v")
+
+[node name="death_player" parent="." index="1" instance=ExtResource("3_f024u")]
+
+[node name="player_attack" parent="." index="2" instance=ExtResource("4_nlshs")]
+
+[node name="player_state_machine" parent="." index="3" instance=ExtResource("5_p4vu3")]

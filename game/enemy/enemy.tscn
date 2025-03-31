@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=3 uid="uid://csa3n2hvqyshb"]
+
+[ext_resource type="PackedScene" uid="uid://cf0cgusy4b3oa" path="res://game/base_entity/entity.tscn" id="1_3dvn5"]
+[ext_resource type="Script" uid="uid://ca6onlm7yr77p" path="res://game/enemy/enemy.gd" id="2_q106d"]
+[ext_resource type="PackedScene" uid="uid://gaywcxjntead" path="res://game/skills/enemy_attack.tscn" id="3_7388b"]
+[ext_resource type="PackedScene" uid="uid://5q58jfss1jh" path="res://game/skills/enemy_move.tscn" id="4_glrgy"]
+[ext_resource type="PackedScene" uid="uid://sllwb5ew2axe" path="res://game/skills/take_damage.tscn" id="5_s5ebu"]
+[ext_resource type="PackedScene" uid="uid://bbedtrj83i0s3" path="res://game/skills/enemy_state_machine.tscn" id="6_glrgy"]
+[ext_resource type="PackedScene" uid="uid://db8wdmlyjwq76" path="res://game/skills/draw_enemy.tscn" id="7_s5ebu"]
+
+[node name="enemy" instance=ExtResource("1_3dvn5")]
+script = ExtResource("2_q106d")
+
+[node name="enemy_attack" parent="." index="1" instance=ExtResource("3_7388b")]
+
+[node name="enemy_move" parent="." index="2" instance=ExtResource("4_glrgy")]
+
+[node name="take_damage" parent="." index="3" instance=ExtResource("5_s5ebu")]
+
+[node name="enemy_state_machine" parent="." index="4" instance=ExtResource("6_glrgy")]
+
+[node name="draw_enemy" parent="." index="5" instance=ExtResource("7_s5ebu")]

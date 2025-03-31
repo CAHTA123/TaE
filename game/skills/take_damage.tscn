@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://sllwb5ew2axe"]
+
+[ext_resource type="Script" uid="uid://ycmrcl38nya5" path="res://game/skills/take_damage.gd" id="1_l307y"]
+
+[node name="take_damage" type="Node"]
+script = ExtResource("1_l307y")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://db8wdmlyjwq76"]
+
+[ext_resource type="Script" uid="uid://crgsurh3wstmr" path="res://game/skills/draw_enemy.gd" id="1_mrk5x"]
+
+[node name="draw_enemy" type="Node2D"]
+script = ExtResource("1_mrk5x")

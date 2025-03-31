@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://spmo71ny1elp"]
+
+[ext_resource type="Script" uid="uid://crwm4f2eaw3qp" path="res://game/player/death_player.gd" id="1_1b32m"]
+
+[node name="death_player" type="Node"]
+script = ExtResource("1_1b32m")

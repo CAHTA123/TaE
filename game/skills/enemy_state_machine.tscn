@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbedtrj83i0s3"]
+
+[ext_resource type="Script" uid="uid://ddwqwdwu71j6p" path="res://game/skills/enemy_state_machine.gd" id="1_2jead"]
+
+[node name="enemy_state_machine" type="Node"]
+script = ExtResource("1_2jead")

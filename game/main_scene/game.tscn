@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://g0e06bqb4wg6"]
+
+[ext_resource type="Script" uid="uid://daf630coqv0gq" path="res://game/main_scene/game.gd" id="1_0t4xy"]
+[ext_resource type="PackedScene" uid="uid://c176je26g33ps" path="res://game/player/player_base.tscn" id="1_7ibgx"]
+[ext_resource type="PackedScene" uid="uid://csa3n2hvqyshb" path="res://game/enemy/enemy.tscn" id="2_mdx3h"]
+
+[sub_resource type="Environment" id="Environment_4cy6u"]
+background_mode = 3
+glow_enabled = true
+
+[node name="Game" type="Node"]
+script = ExtResource("1_0t4xy")
+pooled_object_scene = ExtResource("2_mdx3h")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4cy6u")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(14.917, 23.205, 17.68, 1)
+
+[node name="player_base" parent="." instance=ExtResource("1_7ibgx")]
+position = Vector2(576, 324)
+
+[node name="enemys" type="Node" parent="."]
+
+[node name="enemy" parent="enemys" instance=ExtResource("2_mdx3h")]
+position = Vector2(386, 280)
+
+[node name="bullets" type="Node" parent="."]
