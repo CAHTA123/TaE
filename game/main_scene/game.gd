@@ -2,8 +2,6 @@ extends Node
 
 @export var pooled_object_scene: PackedScene
 
-var proverka: int = 23
-
 var pool_size: int = 50
 
 var object_pool: Array = [] 
